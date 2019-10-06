@@ -6,8 +6,7 @@
 #include<cmath>
 
 using namespace std;
-int main()
-	
+int main()	
 {int a;
  int temperature[100];	
 
@@ -16,21 +15,21 @@ int main()
 	
       //phase1
       //10 x 10 seen as n x n	
-	for(int i=0;i<100;i++)        //assigning temperature with all values as zeroes
+	for(int i=0;i<100;++i)        //assigning temperature with all values as zeroes
 	{temperature[i]=0;}
 	
 
 	
 temperature[55]=rand()%101;	
 	//linear right
-                    for(int i=56;i<60;i++)
+                    for(int i=56;i<60;++i)
 	{	if(rand()%2==0)
 		temperature[i]=temperature[i-1]+rand()%5;
 		else
 		temperature[i]=temperature[i-1]-rand()%5; }
 		
 	//linear left
-	       for(int i=54;i>=50;i--)
+	       for(int i=54;i>=50;--i)
 	       {  if(rand()%2==0)
 		   temperature[i]=temperature[i+1]+rand()%5;
 		   else
